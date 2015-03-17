@@ -26,6 +26,8 @@ function doheader($title = '') {
 ?>
 <html>
 <head>
+	<meta charset=utf-8 />
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<title>OpenDataQuiz: <?php echo $title ?></title>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/chartist.min.js"></script>
@@ -54,13 +56,16 @@ function dbconnect() {
 	global $dbhost, $dbuser, $dbpassword, $dbname;
 	mysql_connect($dbhost, $dbuser, $dbpassword);
 	mysql_select_db($dbname);
+	mysql_query('SET NAMES utf8');
 }
 
 /** ********************************************************************************************************/
 
 function getsession($reset = false) {
 	dbconnect();
-	session_start();
+
+	if (session_status() == PHP_SESSION_NONE)
+		session_start();
 
 	if (isset ($_SESSION['index']) == false || $reset == true) {
 		mysql_query('INSERT INTO tries (completed, rights) VALUES (0, 0)');

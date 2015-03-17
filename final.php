@@ -47,7 +47,7 @@ doheader('finito!');
 
 <div class="row">
 	<div class="col-lg-12 text-center">
-		<a class="btn btn-primary btn-lg" href="https://twitter.com/share?url=http%3A%2F%2Fmadbob.org%2Fopendataquiz&text=%23opendata+quiz%3A+io+ho+risposto+correttamente+a+<?php echo $_SESSION['right'] ?>+domande+su+<?php echo $questions ?>%3A+prova+tu%21" onclick="javascript:window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600\');return false;" target="_blank">Condividi su Twitter il tuo Risultato</a>
+		<a class="btn btn-primary btn-lg" href="https://twitter.com/share?url=http%3A%2F%2Fopendataquiz.madbob.org%2F&text=%23opendata+quiz%3A+io+ho+risposto+correttamente+a+<?php echo $_SESSION['right'] ?>+domande+su+<?php echo $questions ?>%3A+prova+tu%21" onclick="javascript:window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600\');return false;" target="_blank">Condividi su Twitter il tuo Risultato</a>
 		<a class="btn btn-default btn-lg" href="index.php?action=reset">Ricomincia Daccapo</a>
 	</div>
 </div>

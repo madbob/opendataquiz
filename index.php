@@ -36,6 +36,7 @@ if (isset($_GET['action'])) {
 			if (isset($answer) == false || (is_float($answer) == false && is_numeric($answer) == false))
 				die('ko');
 
+			$identifier = $_SESSION['identifier'];
 			$question = $_SESSION['currentquestion'];
 			$rightanswer = $_SESSION['currentanswer'];
 
@@ -45,14 +46,14 @@ if (isset($_GET['action'])) {
 
 			$query = "UPDATE questions SET frequency = frequency + 1";
 			if ($right == true)
-				$query .= " AND rights = rights + 1";
+				$query .= ", rights = rights + 1";
 			$query .= " WHERE id = " . $question;
 			mysql_query($query);
 
 			$query = "UPDATE tries SET completed = completed + 1";
 			if ($right == true)
-				$query .= " AND rights = rights + 1";
-			$query .= " WHERE id = " . $question;
+				$query .= ", rights = rights + 1";
+			$query .= " WHERE id = " . $identifier;
 			mysql_query($query);
 
 			$query = "UPDATE answers SET selected = selected + 1 WHERE question_id = $question AND value = $answer";

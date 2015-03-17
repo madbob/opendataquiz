@@ -59,6 +59,7 @@ $rightanswer = $question->data[$target];
 			</h4>
 
 			<h2><?php echo sprintf($question->question, $question->labels[$target]) ?></h2>
+			<h5>Clicca sulla <?php $question->type == 'Bar' ? print('barra') : print('fetta') ?> corrispondente</h5>
 		</div>
 	</div>
 </div>
