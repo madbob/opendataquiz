@@ -94,8 +94,8 @@ doheader('finito!');
 	var chart = new Chartist.Pie('.ct-final', data, options, responsiveOptions);
 
 	$('.ct-final').animate({opacity: 1}, 500, function () {
-		$('.ct-final .ct-slice[ct\\:value=<?php echo $_SESSION['right'] ?>]').attr('class', 'ct-slice wrong');
-		$('.ct-final .ct-slice[ct\\:value!=<?php echo $_SESSION['right'] ?>]').attr('class', 'ct-slice right');
+		$('.ct-final .ct-slice[ct\\:value=<?php echo $_SESSION['right'] ?>]').attr('class', 'ct-slice right');
+		$('.ct-final .ct-slice[ct\\:value!=<?php echo $_SESSION['right'] ?>]').attr('class', 'ct-slice wrong');
 	});
 </script>
 
