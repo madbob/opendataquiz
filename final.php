@@ -78,7 +78,7 @@ doheader('finito!');
 <div class="row">
 	<div class="col-lg-8 col-lg-offset-2 text-center">
 		<p>
-			<b>Made with <img src="img/madewithhammer.png" /> by <a href="http://madbob.org/">MadBob</a></b>
+			<b>Made with <img src="img/madewithhammer.png" /> by <a href="http://madbob.org/">MadBob</a> | See <a href="https://github.com/madbob/opendataquiz">on GitHub</a></b>
 		</p>
 	</div>
 </div>
