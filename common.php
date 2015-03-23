@@ -29,6 +29,23 @@ function doheader($title = '') {
 	<meta charset=utf-8 />
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<title>OpenDataQuiz: <?php echo $title ?></title>
+
+	<meta name="twitter:title" content="OpenDataQuiz" />
+	<meta name="twitter:creator" content="@madbob" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:url" content="http://opendataquiz.madbob.org/" />
+	<meta name="twitter:image" content="http://opendataquiz.madbob.org/img/tw.png" />
+
+	<meta property="og:site_name" content="OpenDataQuiz" />
+	<meta property="og:title" content="OpenDataQuiz" />
+	<meta property="og:url" content="http://opendataquiz.madbob.org/" />
+	<meta property="og:image" content="http://opendataquiz.madbob.org/img/fb.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:country-name" content="Italy" />
+	<meta property="og:email" content="bob@linux.it" />
+	<meta property="og:locale" content="it_IT" />
+	<meta property="og:description" content="Gli opendata sono un gioco..." />
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/chartist.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
